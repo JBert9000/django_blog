@@ -122,6 +122,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Creates a media folder where all uploaded items will live in the root directory of this Django project.
+MEDIA_URL = '/media/' # Creates URL which allows access to all uploaded media via a browser.
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'blog-home'

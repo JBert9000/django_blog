@@ -10,7 +10,22 @@
       <p class="text-secondary">{{ user.email }}</p>
     </div>
   </div>
-  <!-- FORM HERE -->
+  <div class="content-section">
+      <form class="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Update Your Profile</legend>
+            {{ u_form|crispy }}
+            {{ p_form|crispy }}
+        </fieldset>
+
+        <div class="form-group">
+          <button class="btn btn-outline-info" type="submit" value="submit">Update</button>
+        </div>
+      </form>
+  </div>
 </div>
+
+<script>document.querySelector(".custom-file-label").className += " mt-5"</script>
 
 {% endblock %}
